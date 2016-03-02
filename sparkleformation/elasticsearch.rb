@@ -47,7 +47,7 @@ SparkleFormation.new(:elasticsearch) do
           dedicated_master_type ref!(:dedicated_master_instance_type)
           dedicated_master_count ref!(:dedicated_master_instance_count)
         end
-        eBS_options do
+        set!('EBS_Options') do
           iops ref!(:ebs_volume_iops)
           volume_size ref!(:ebs_volume_size)
           volume_type 'gp2'
