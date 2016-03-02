@@ -51,7 +51,6 @@ SparkleFormation.new(:elasticsearch) do
           iops ref!(:ebs_volume_iops)
           volume_size ref!(:ebs_volume_size)
           volume_type 'gp2'
-          _camel_keys_set(:auto_disable)
           set!('EBSEnabled', true)
         end
         snapshot_options do
@@ -63,7 +62,6 @@ SparkleFormation.new(:elasticsearch) do
             -> {
               effect 'Allow'
               principal do
-                _camel_keys_set(:auto_disable)
                 set!('AWS', '*')
               end
               action 'es:*'
