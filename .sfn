@@ -19,7 +19,7 @@ Configuration.new do
   end
   #   Name of bucket in object store to hold nested
   #   stack templates
-  nesting_bucket ENV['NESTING_BUCKET']
+  # nesting_bucket ENV['NESTING_BUCKET']
   #   Prefix used on generated template path prior to storage
   #   in the object store
   # nesting_prefix 'nested-templates'
