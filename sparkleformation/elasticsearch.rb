@@ -3,6 +3,10 @@ SparkleFormation.new(:elasticsearch) do
   set!('Description', 'AWS Elasticsearch Service')
 
   parameters do
+    domain_name do
+      type 'String'
+      default 'mydomain'
+    end
     dedicated_master_instance_count do
       type 'String'
       default '3'
@@ -39,6 +43,7 @@ SparkleFormation.new(:elasticsearch) do
     my_company_elasticsearch do
       type "AWS::Elasticsearch::Domain"
       properties do
+        domain_name ref!(:domain_name)
         elasticsearch_cluster_config do
           dedicated_master_enabled 'true'
           instance_count ref!(:master_instance_count)
