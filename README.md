@@ -9,15 +9,14 @@ of the CloudFormation resource [example](http://docs.aws.amazon.com/AWSCloudForm
 And now, because my CloudFormation template is expressed using SparkleFormation I have a re-usable and updatable way to create Amazon AWS Resources.
 Like as many Elasticsearch domains I would ever need. Woooo!
 
-As you will see I have parameterized some of the more interesting or important configuration settings. You can chose which elasticsearch instance type you determine your cluster members
-should run on, choose how many master only and master data instances should be created to make the cluster, and choose the size of the EBS volume for data. Notice I've also been able to
-limit the instance types that are available to choose from.
+As you see I have parameterized some of the more interesting or important configuration settings. You can chose which elasticsearch instance type you determine your cluster members
+should run on, choose how many master only and master data instances should be created to make the cluster, and choose the size of the EBS volume for data.
 
 This was some personal practice. However, I also wrote it as and example of using SparkleFormation to create a CloudFormation stack implementing a AWS CloudFormation Resource.
 Thus using SparkleFormation to directly describe the example in the documentation so they can be compared to each other.
 
 I also wanted to set up the repository so that it is easy for anyone to give `sfn` and SparkleFormation a try. You just need to have ruby and bundler installed, clone this repository
-and run `bundle install`. Oh and set a couple of environment variables....
+and run `bundle install`. Oh, and set a couple of environment variables....
 
 I encourage you to give it a shot.
 
